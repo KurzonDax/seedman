@@ -11,9 +11,13 @@ body {
     body {
         padding-right: 40px;
         padding-left: 40px;
+        padding-bottom: 120px;
     }
 }
 
+#content {
+    margin-bottom: 10px;
+}
 /*
  * Global add-ons
  */
@@ -112,12 +116,12 @@ body {
 
 .page-footer {
     background: #484e55; /* Old browsers */
-    background: -moz-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484e55), color-stop(15%, #3a3f44), color-stop(100%, #313539)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #484e55 0%, #3a3f44 15%, #313539 100%); /* W3C */
+    background: -moz-linear-gradient(top, #484e55 0%, #3a3f44 4%, #313539 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484e55), color-stop(4%, #3a3f44), color-stop(100%, #313539)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #484e55 0%, #3a3f44 4%, #313539 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #484e55 0%, #3a3f44 4%, #313539 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #484e55 0%, #3a3f44 4%, #313539 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #484e55 0%, #3a3f44 4%, #313539 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#484e55', endColorstr='#313539', GradientType=0); /* IE6-9 */
     border: 1px solid rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
@@ -125,7 +129,7 @@ body {
     margin-right: -40px;
     margin-left: -40px;
     padding: 15px 15px 5px 15px;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 40px;
     height: auto;

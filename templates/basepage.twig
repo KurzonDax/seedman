@@ -22,7 +22,7 @@
 </head>
 <body>
     <div id="page">
-
+        <a id="top"></a>
         <header>
             {% include 'includes/navigation.twig' %}
         </header>  <!-- header -->
@@ -40,7 +40,7 @@
     <!-- Core Javascript -->
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/seedman.js"></script>
     <!-- Page specific Javascript -->
     {% for script in scripts %}
         <script src="js/{{ script }}.js"></script>
