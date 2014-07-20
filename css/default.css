@@ -4,7 +4,7 @@
 
 /* Move down content because we have a fixed navbar that is 50px tall */
 body {
-  padding-top: 50px;
+  padding-top: 55px;
 }
 
 @media (min-width: 768px) {
@@ -111,12 +111,14 @@ body {
 }
 
 .page-footer {
-    background-image: -webkit-linear-gradient(#484e55, #3a3f44 60%, #313539);
-    background-image: -o-linear-gradient(#484e55, #3a3f44 60%, #313539);
-    background-image: linear-gradient(#484e55, #3a3f44 60%, #313539);
-    background-repeat: no-repeat;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
-    filter: none;
+    background: #484e55; /* Old browsers */
+    background: -moz-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #484e55), color-stop(15%, #3a3f44), color-stop(100%, #313539)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #484e55 0%, #3a3f44 15%, #313539 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #484e55 0%, #3a3f44 15%, #313539 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#484e55', endColorstr='#313539', GradientType=0); /* IE6-9 */
     border: 1px solid rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     width: 100%;
