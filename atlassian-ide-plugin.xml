@@ -1,0 +1,13 @@
+<atlassian-ide-plugin>
+  <project-configuration id="1">
+    <servers id="2">
+      <jira id="3">
+        <server-id id="4">e6ce2988-5e56-412d-82d3-88c6f1c2529a</server-id>
+        <name>JIRA Server</name>
+        <url>http://rawmass.com:8080</url>
+        <shared>false</shared>
+        <useSessionCookies>false</useSessionCookies>
+      </jira>
+    </servers>
+  </project-configuration>
+</atlassian-ide-plugin>

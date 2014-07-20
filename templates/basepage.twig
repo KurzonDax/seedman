@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="kurzondax">
+    <link rel="icon" href="favicon.ico">
+
+    <title>{{ pageTitle }}</title>
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/{{ pageName }}.css" rel="stylesheet">
+
+</head>
+<body>
+    <div id="page">
+
+        <header>
+            {% include 'includes/navigation.twig' %}
+        </header>  <!-- header -->
+
+        <div id="content">
+            {{ include(template_from_string(content)) }}
+        </div> <!-- content -->
+
+        <footer>
+            {% include 'includes/footer.twig' %}
+        </footer>
+
+    </div>  <!-- page -->
+
+    <!-- Core Javascript -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Page specific Javascript -->
+    {% for script in scripts %}
+        <script src="js/{{ script }}.js"></script>
+    {% endfor %}
+
+</body>
+</html>
