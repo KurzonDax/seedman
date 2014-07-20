@@ -14,9 +14,9 @@ class page {
     private $twig;
     private $template;
     private $__pageTitle;
-    private $__pageName;
-    private $__content;
-    private $__scripts;
+    private $__pageCSS=null;
+    private $__content="<br><h1>PAGE CONTENT NOT SET</h1><br>";
+    private $__scripts=array();
 
     function __construct()
     {
@@ -51,9 +51,9 @@ class page {
     /**
      * @param string $_pageName
      */
-    public function setPageName($_pageName)
+    public function setPageCSS($_pageName)
     {
-        $this->__pageName = $_pageName;
+        $this->__pageCSS = $_pageName;
     }
 
     /**
@@ -85,7 +85,7 @@ class page {
             echo $this->template->render(array(
             'WWW_TOP' => WWW_TOP,
             'pageTitle' => $this->__pageTitle,
-            'pageName'  => $this->__pageName,
+            'pageName'  => $this->__pageCSS,
             'content'   => $this->__content,
             'scripts'   => $this->__scripts
         ));

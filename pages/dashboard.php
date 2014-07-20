@@ -13,7 +13,6 @@ require_once(WWW_DIR . 'lib/page.php');
 $dashboard = new page();
 
 $dashboard->setContent($dashboard->renderContent('dashboard'));
-$dashboard->setPageName('dashboard');
 $dashboard->setPageTitle('SeedMan Dashboard');
 $dashboard->addScript('plugins/highcharts');
 $dashboard->addScript('plugins/highcharts-theme');

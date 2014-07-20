@@ -26,15 +26,14 @@ else
 
 if(@session_start())
 {
-    if ((function_exists("get_magic_quotes_gpc") && get_magic_quotes_gpc()) || ini_get('magic_quotes_sybase'))
-    {
-        foreach ($_GET as $k => $v) $_GET[$k] = (is_array($v)) ? array_map("stripslashes", $v) : stripslashes($v);
-        foreach ($_POST as $k => $v) $_POST[$k] = (is_array($v)) ? array_map("stripslashes", $v) : stripslashes($v);
-        foreach ($_REQUEST as $k => $v) $_REQUEST[$k] = (is_array($v)) ? array_map("stripslashes", $v) : stripslashes($v);
-        foreach ($_COOKIE as $k => $v) $_COOKIE[$k] = (is_array($v)) ? array_map("stripslashes", $v) : stripslashes($v);
-    }
 
-    $page=(isset($_GET['page']) && !empty($_GET['page'])) ? $_GET['page'] : 'dashboard';
+    $_GET=cleanArray($_GET);
+    $_POST=cleanArray($_POST);
+    $_REQUEST=cleanArray($_REQUEST);
+    $_COOKIE=cleanArray($_COOKIE);
+
+    $getKeys = array_keys($_GET);
+    $page=array_shift($getKeys) ?: 'dashboard';
 
     switch ($page)
     {
@@ -45,9 +44,19 @@ if(@session_start())
             include(WWW_DIR . 'pages/' . $page . '.php');
             break;
         default:
-            header("HTTP/1.1 404 Not Found");
-            die();
+            include(WWW_DIR . 'pages/404.php');
             break;
     }
 
+}
+function cleanArray($var)
+{
+    $return=array();
+
+    foreach($var as $k => $v)
+    {
+        $return[$k] = filter_var($v, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    }
+
+    return $return;
 }

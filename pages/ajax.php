@@ -7,3 +7,6 @@
  * File: ajax.php
  * 
  */
+
+$getKeys=array_keys($_GET);
+

@@ -13,7 +13,11 @@
     <!-- CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/{{ pageName }}.css" rel="stylesheet">
+    {% if pageCSS is not null %}
+        <link href="css/{{ pageCSS }}.css" rel="stylesheet">
+    {% else %}
+        <link href="css/default.css" rel="stylesheet">
+    {% endif %}
 
 </head>
 <body>
