@@ -41,7 +41,7 @@ defined('LINFO_WEB_PATH') or define('LINFO_WEB_PATH', !defined('LINFO_CLI') ? su
  */
 function linfoAutoloader($class) {
 	// Asuming this is a class
-	$class_file = LINFO_LOCAL_PATH . 'lib/class.'.$class.'.php';
+	$class_file = LINFO_LOCAL_PATH . 'Linfo/class.'.$class.'.php';
 
 	if (is_file($class_file)) {
 		require_once $class_file;
@@ -51,7 +51,7 @@ function linfoAutoloader($class) {
 	}
 
 	// But maybe it's really an interface?
-	$interface_file = LINFO_LOCAL_PATH . 'lib/interface.'.$class.'.php';
+	$interface_file = LINFO_LOCAL_PATH . 'Linfo/interface.'.$class.'.php';
 
 	if (is_file($interface_file)) {
 		require_once $interface_file;

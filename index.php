@@ -41,6 +41,7 @@ if(@session_start())
         case 'ajax':
         case 'files':
         case 'torrents':
+        case 'tester':
             include(WWW_DIR . 'pages/' . $page . '.php');
             break;
         default:

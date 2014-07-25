@@ -124,7 +124,7 @@ class page {
      *
      * @return string               html
      */
-    function renderContent($template, $data=array())
+    function renderContent($template, $data)
     {
         try
         {

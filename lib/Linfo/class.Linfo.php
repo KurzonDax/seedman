@@ -276,15 +276,15 @@ class Linfo {
 		}
 
 		// If configuration file does not exist but the sample does, say so
-		if (!is_file(LINFO_LOCAL_PATH . 'config.inc.php') && is_file(LINFO_LOCAL_PATH . 'sample.config.inc.php'))
+		if (!is_file(LINFO_LOCAL_PATH . 'linfo.config.inc.php') && is_file(LINFO_LOCAL_PATH . 'sample.config.inc.php'))
 			throw new LinfoFatalException('Make changes to sample.config.inc.php then rename as config.inc.php');
 
 		// If the config file is just gone, also say so
-		elseif(!is_file(LINFO_LOCAL_PATH . 'config.inc.php'))
+		elseif(!is_file(LINFO_LOCAL_PATH . 'linfo.config.inc.php'))
 			throw new LinfoFatalException('Config file not found.');
 
 		// It exists; load it
-		$settings = LinfoCommon::getVarFromFile(LINFO_LOCAL_PATH . 'config.inc.php', 'settings');
+		$settings = LinfoCommon::getVarFromFile(LINFO_LOCAL_PATH . 'linfo.config.inc.php', 'settings');
 
 		// Don't just blindly assume we have the ob_* functions...
 		if (!function_exists('ob_start'))
